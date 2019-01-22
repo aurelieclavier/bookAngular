@@ -13,12 +13,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { Routes, RouterModule } from '@angular/router';
 // Component
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { BookListComponent } from './book-list/book-list.component';
-import { SingleBookComponent } from './bookList/single-book/single-book.component';
-import { BookFormComponent } from './bookList/book-form/book-form.component';
-import { HeaderComponent } from './header/header.component';
+import { SingleBookComponent } from './book-list/single-book/single-book.component';
+import { BookFormComponent } from './book-list/book-form/book-form.component';
 
 const appRoutes: Routes = [
 	{ path: 'auth/signup', component: SignupComponent },
@@ -63,7 +63,7 @@ export class AppModule {
 			authDomain: "bookangular-ad883.firebaseapp.com",
 			databaseURL: "https://bookangular-ad883.firebaseio.com",
 			projectId: "bookangular-ad883",
-			storageBucket: "",
+			storageBucket: "gs://bookangular-ad883.appspot.com/",
 			messagingSenderId: "470953409162"
 		};
 		firebase.initializeApp(config);
